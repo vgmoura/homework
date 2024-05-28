@@ -1,16 +1,17 @@
-def is_prime(n):
-    if n < 2:
+def is_prime(number): #функция: проверка на простое число
+    if number < 2:
         return False
-    for i in range(2, int(n**0.5) + 1):
-        if n % i == 0:
+    for i in range(2, int(number ** 0.5 + 1)): #проверка, что выбранное число не делиться ни на что в диапазоне от 2 до этого числа
+        if number % i == 0:
             return False
-    return True
+    else:
+        return True
 
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 
-primes = [num for num in numbers if is_prime(num)]
-not_primes = [num for num in numbers if not is_prime(num)]
+primes = [number for number in numbers if is_prime(number)]
+not_primes = [number for number in numbers if not is_prime(number)]
 not_primes.remove(1)
 
-print("Простые числа:", primes)
-print("Не простые числа:", not_primes)
+print("Primes:", primes)
+print("Not primes:", not_primes)
