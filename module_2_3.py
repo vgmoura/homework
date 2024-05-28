@@ -1,11 +1,13 @@
 #выписывать из списка только положительные числа до тех пор, пока не встретите отрицательное или не закончится список
 my_list = [42, 69, 0, 322, 13, 0, 99, -5, 9, 8, 7, -6, 5]
-positive = []
-negative = []
-for i in my_list:
-        if i >= 0:
-            positive.append(i)
-            print(i)
-        else:
-            negative.append(i)
+
+positive_num = [] #создаем пустой список
+
+for number in my_list:
+        if number > 0: #проверяем список на значения болье нуля
+            positive_num.append(number) #добавляем положительные числа в список
+            print(number) #выводим список положительных чисел
+        elif number < 0: #если число меньше нуля,то прерываем цикл
             break
+
+
